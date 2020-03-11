@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/top', 'TopController@index');
+Route::get('/post', 'PostController@index');
