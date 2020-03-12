@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>postページ</title>
-</head>
-<body>
-    <header>
-    </header>
-    <main>
-    <h1>足し算の筆算の問題を出力します</h1>
+@extends('layout.application')
+
+@section('title')
+    計算問題出力
+@endsection
+
+@section('header')
+@endsection
+
+@section('content')
 
     <!-- 計算問題の出力(答え無し) -->
     <h3>計算問題</h3>
     <!-- 配列の初期化 -->
     <?php $num_1_array = []; ?>
     <?php $num_2_array = []; ?>
-
+    
     <!-- for文の条件指定 10問出題したいので<=10に設定 -->
     @for ($i = 1; $i <= 10; $i++)
     
@@ -46,14 +44,14 @@
         @else
         <?php $num_2_array = [$num_2]; ?>
         @endif
-
+    
         <!-- num_totalの値をそれぞれ配列に格納 -->
         @if (isset($num_total_array[0]))
         <?php array_push($num_total_array, $num_total); ?>
         @else
         <?php $num_total_array = [$num_total]; ?>
         @endif
-
+    
         <!-- 計算式の出力 -->
         <p>
           {{$num_1}}<br>
@@ -61,24 +59,25 @@
         +__<br>
         </p>
     @endfor
-
+    
     <!-- 確認用そのうち消す -->
     <?php var_dump($num_1_array); ?><br>
     <?php var_dump($num_2_array); ?><br>
     <?php var_dump($num_total_array); ?><br>
-
+    
     <!-- 各配列を一括管理するための配列に格納する -->
     <?php $contents_array = [$num_1_array, $num_2_array, $num_total_array]; ?>
     <?php var_dump($contents_array); ?>
 
     <!-- 計算問題の出力(答え有り) -->
     <h3>計算問題の回答</h3>
-
-    @foreach ($contents_array as $content)
-        <?php echo $content[0]; ?>
+    
+    @foreach ($num_total_array as $ans)
+        <?php echo $ans; ?>
     @endforeach
-    </main>
-    <footer>
-    </footer>
-</body>
-</html>
+@endsection
+
+@section('footer')
+    <p>footerです</p>
+@endsection
+
