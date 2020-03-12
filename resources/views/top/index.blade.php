@@ -12,9 +12,3 @@
 </a>
 
 @endsection
-
-@section('footer')
-    <p>footerです</p>
-@endsection
-
-
