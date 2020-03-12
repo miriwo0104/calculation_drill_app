@@ -8,7 +8,7 @@
 
 <p>このサービスでは筆算の問題をランダムで出力することができます。</p>
 <a href="/post">
-    <button type="button">使ってみる</button>
+    <button type="button" class="btn btn-success btn-lg">使ってみる</button>
 </a>
 
 @endsection
