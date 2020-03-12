@@ -1,16 +1,13 @@
 @extends('layout.application')
 
 @section('title')
-    計算問題出力
+    計算問題回答出力
 @endsection
 
 @section('content')
 
     <!-- 計算問題の出力(答え無し) -->
     <h3>計算問題</h3>
-    <a href="/post/answer">
-        <button type="button">答えを表示する</button>
-    </a>
     <!-- 配列の初期化 -->
     <?php $num_1_array = []; ?>
     <?php $num_2_array = []; ?>
@@ -76,8 +73,3 @@
         <?php echo $ans; ?>
     @endforeach
 @endsection
-
-@section('footer')
-    <p>footerです</p>
-@endsection
-

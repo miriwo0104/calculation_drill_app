@@ -9,4 +9,8 @@ class PostController extends Controller
     public function index() {
         return view('post.index');
     }
+
+    public function answer() {
+        return view('post.answer');
+    }
 }

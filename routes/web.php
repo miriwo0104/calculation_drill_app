@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'TopController@index');
 Route::get('/post', 'PostController@index');
+Route::get('/post/answer', 'PostController@answer');
