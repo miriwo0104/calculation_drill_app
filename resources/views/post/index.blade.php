@@ -76,8 +76,3 @@
         <?php echo $ans; ?>
     @endforeach
 @endsection
-
-@section('footer')
-    <p>footerです</p>
-@endsection
-
