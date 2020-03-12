@@ -18,7 +18,7 @@
     <?php $num_2_array = []; ?>
 
     <!-- for文の条件指定 10問出題したいので<=10に設定 -->
-    @for($i = 1; $i <= 10; $i++)
+    @for ($i = 1; $i <= 10; $i++)
     
         <!-- 問題数を出力 -->
         <h4>{{$i}}</h4>
@@ -31,7 +31,7 @@
         <?php $num_total = $num_1 + $num_2; ?>
     
         <!-- num_1の乱数をそれぞれ配列に格納 -->
-        @if(isset($num_1_array[0]))
+        @if (isset($num_1_array[0]))
         
         <!-- 配列の0番目に値が格納されている場合、末尾に追加 -->
         <?php array_push($num_1_array, $num_1); ?>
@@ -41,14 +41,14 @@
         @endif
     
         <!-- num_2の乱数をそれぞれ配列に格納 -->
-        @if(isset($num_2_array[0]))
+        @if (isset($num_2_array[0]))
         <?php array_push($num_2_array, $num_2); ?>
         @else
         <?php $num_2_array = [$num_2]; ?>
         @endif
 
         <!-- num_totalの値をそれぞれ配列に格納 -->
-        @if(isset($num_total_array[0]))
+        @if (isset($num_total_array[0]))
         <?php array_push($num_total_array, $num_total); ?>
         @else
         <?php $num_total_array = [$num_total]; ?>
@@ -65,10 +65,18 @@
     <!-- 確認用そのうち消す -->
     <?php var_dump($num_1_array); ?><br>
     <?php var_dump($num_2_array); ?><br>
-    <?php var_dump($num_total_array); ?>
+    <?php var_dump($num_total_array); ?><br>
+
+    <!-- 各配列を一括管理するための配列に格納する -->
+    <?php $contents_array = [$num_1_array, $num_2_array, $num_total_array]; ?>
+    <?php var_dump($contents_array); ?>
 
     <!-- 計算問題の出力(答え有り) -->
     <h3>計算問題の回答</h3>
+
+    @foreach ($contents_array as $content)
+        <?php echo $content[0]; ?>
+    @endforeach
     </main>
     <footer>
     </footer>
