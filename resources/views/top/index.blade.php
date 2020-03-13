@@ -7,7 +7,7 @@
 @section('content')
 
 <p>このサービスでは筆算の問題をランダムで出力することができます。</p>
-<a href="/post">
+<a href="/post/addition">
     <button type="button" class="btn btn-success btn-lg">使ってみる</button>
 </a>
 
