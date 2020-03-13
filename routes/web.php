@@ -22,3 +22,5 @@ Route::get('/post/addition', 'PostController@addition');
 Route::get('/post/addition/answer', 'PostController@addition_answer');
 Route::get('/post/subtraction', 'PostController@subtraction');
 Route::get('/post/subtraction/answer', 'PostController@subtraction_answer');
+Route::get('/post/multiplication', 'PostController@multiplication');
+Route::get('/post/multiplication/answer', 'PostController@multiplication_answer');

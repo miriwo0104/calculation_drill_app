@@ -21,4 +21,12 @@ class PostController extends Controller
     public function subtraction_answer() {
         return view('post.subtraction_answer');
     }
+
+    public function multiplication() {
+        return view('post.multiplication');
+    }
+
+    public function multiplication_answer() {
+        return view('post.multiplication_answer');
+    }
 }
