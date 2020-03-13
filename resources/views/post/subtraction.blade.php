@@ -25,8 +25,15 @@
         <?php $num_1 = random_int(1, 99); ?>
         <?php $num_2 = random_int(1, 99); ?>
     
+
+        @php
+            while ($num_1 < $num_2) {
+                $num_1 = random_int(1, 99);
+            }
+        @endphp
+
         <!-- 生成された乱数を足した値を変数$num_totalに格納 -->
-        <?php $num_total = $num_1 + $num_2; ?>
+        <?php $num_total = $num_1 - $num_2; ?>
     
         <!-- num_1の乱数をそれぞれ配列に格納 -->
         @if (isset($num_1_array[0]))
@@ -56,7 +63,7 @@
         <p>
           {{$num_1}}<br>
           {{$num_2}}<br>
-        +__<br>
+        -__<br>
         </p>
     @endfor
     
