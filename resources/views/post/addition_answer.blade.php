@@ -1,7 +1,7 @@
 @extends('layout.application')
 
 @section('title')
-    計算問題回答出力
+    足し算の問題回答出力
 @endsection
 
 @section('content')
