@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index() {
-        return view('post.index');
+    public function addition() {
+        return view('post.addition');
     }
 
-    public function answer() {
-        return view('post.answer');
+    public function addition_answer() {
+        return view('post.addition_answer');
     }
 }
