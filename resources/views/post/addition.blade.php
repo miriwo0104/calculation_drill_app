@@ -68,11 +68,4 @@
     <!-- 各配列を一括管理するための配列に格納する -->
     <?php $contents_array = [$num_1_array, $num_2_array, $num_total_array]; ?>
     <?php var_dump($contents_array); ?>
-
-    <!-- 計算問題の出力(答え有り) -->
-    <h3>計算問題の回答</h3>
-    
-    @foreach ($num_total_array as $ans)
-        <?php echo $ans; ?>
-    @endforeach
 @endsection
