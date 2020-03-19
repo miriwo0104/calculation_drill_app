@@ -15,5 +15,6 @@
         {{$datum['num_2']}}<br>
         +__<br>
         {{$datum['num_result']}}<br>
+    </p>
     @endforeach
 @endsection
