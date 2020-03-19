@@ -6,7 +6,7 @@
 
 @section('content')
 
-<!-- 計算問題の出力(答え無し) -->
+    <!-- 配列に入った連想配列の中身を出力する -->
     <h3>計算問題</h3>
     <a href="/post/addition/answer">
         <button type="button">答えを表示する</button>
