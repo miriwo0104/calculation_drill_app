@@ -1,7 +1,7 @@
 @extends('layout.application')
 
 @section('title')
-    引き算の計算問題出力
+    <?php $title ?>
 @endsection
 
 @section('content')
