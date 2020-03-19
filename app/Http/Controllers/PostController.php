@@ -19,20 +19,20 @@ class PostController extends Controller
             $num_2 = random_int(1, 99);
 
             #足し算の答えを変数に格納
-            $num_total = $num_1 + $num_2;
+            $num_result = $num_1 + $num_2;
 
             if (isset($data[0])){
                 array_push($data, [
                     'num_1' => $num_1,
                     'num_2' => $num_2,
-                    'total' => $num_total,
+                    'total' => $num_result,
                 ]);
             }else{
                 $data = [
                     [
                         'num_1' => $num_1,
                         'num_2' => $num_2,
-                        'total' => $num_total,
+                        'total' => $num_result,
                     ]
                 ];
             }
