@@ -12,7 +12,7 @@
         <button type="button">答えを表示する</button>
     </a>
     
-    <!-- for文の条件指定 10問出題したいので<=10に設定 -->
+    <!-- 配列に入った連想配列の中身を出力する -->
 
     @foreach ($data as $datum)
         <p>
