@@ -1,7 +1,7 @@
 @extends('layout.application')
 
 @section('title')
-    <?php $title ?>
+    {{$title}}
 @endsection
 
 @section('content')
@@ -13,7 +13,6 @@
     </a>
     
     <!-- 配列に入った連想配列の中身を出力する -->
-
     @foreach ($data as $datum)
         <p>
             {{$datum['num_1']}}<br>

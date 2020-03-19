@@ -38,7 +38,7 @@ class PostController extends Controller
             }
         } 
 
-        return view('post.addition', compact('data'));
+        return view('post.addition', compact('data', 'title'));
     }
 
     public function addition_answer() {
