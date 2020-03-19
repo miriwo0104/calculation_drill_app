@@ -99,10 +99,10 @@ class PostController extends Controller
     }
     
     public function subtraction_answer() {
-                
+        
         #sessionに格納された値を取得
         $data = session()->get('subtraction_data');
-
+        
         #ページタイトルの変数格納
         $title = '引き算の計算問題解答出力';
         
@@ -119,31 +119,40 @@ class PostController extends Controller
             #足す数と足される数を乱数で取得
             $num_1 = random_int(1, 99);
             $num_2 = random_int(1, 99);
-
+            
             #足し算の答えを変数に格納
             $num_result = $num_1 * $num_2;
-
+            
             if (isset($data[0])){
                 array_push($data, [
                     'num_1' => $num_1,
                     'num_2' => $num_2,
-                    'total' => $num_result,
-                ]);
-            }else{
-                $data = [
-                    [
-                        'num_1' => $num_1,
-                        'num_2' => $num_2,
-                        'total' => $num_result,
-                    ]
+                    'num_result' => $num_result,
+                    ]);
+                }else{
+                    $data = [
+                        [
+                            'num_1' => $num_1,
+                            'num_2' => $num_2,
+                            'num_result' => $num_result,
+                            ]
                 ];
             }
         }
-
+        #計算データが格納された配列$dataをsessionに格納
+        session()->put('multiplication_data', $data);
+        
         return view('post.multiplication', compact('data', 'title'));
     }
-
+    
     public function multiplication_answer() {
-        return view('post.multiplication_answer');
+
+        #sessionに格納された値を取得
+        $data = session()->get('multiplication_data');
+        
+        #ページタイトルの変数格納
+        $title = '割り算の計算問題解答出力';
+        
+        return view('post.multiplication_answer', compact('data', 'title'));
     }
 }

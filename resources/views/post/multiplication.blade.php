@@ -8,7 +8,7 @@
 
     <!-- 配列に入った連想配列の中身を出力する -->
     <h3>計算問題</h3>
-    <a href="/post/addition/answer">
+    <a href="/post/multiplication/answer">
         <button type="button">答えを表示する</button>
     </a>
     
@@ -17,5 +17,6 @@
         {{$datum['num_1']}}<br>
         {{$datum['num_2']}}<br>
         ×__<br>
+    </p>
     @endforeach
 @endsection
