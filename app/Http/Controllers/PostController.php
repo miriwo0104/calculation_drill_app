@@ -25,14 +25,14 @@ class PostController extends Controller
                 array_push($data, [
                     'num_1' => $num_1,
                     'num_2' => $num_2,
-                    'total' => $num_result,
+                    'num_result' => $num_result,
                 ]);
             }else{
                 $data = [
                     [
                         'num_1' => $num_1,
                         'num_2' => $num_2,
-                        'total' => $num_result,
+                        'num_result' => $num_result,
                     ]
                 ];
             }
