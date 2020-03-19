@@ -81,7 +81,7 @@ class PostController extends Controller
                 ];
             }
         } 
-        return view('post.subtraction', compact('data'));
+        return view('post.subtraction', compact('data', 'title'));
     }
 
     public function subtraction_answer() {
