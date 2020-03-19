@@ -1,7 +1,7 @@
 @extends('layout.application')
 
 @section('title')
-    <?php $title ?>
+    {{$title}}
 @endsection
 
 @section('content')
