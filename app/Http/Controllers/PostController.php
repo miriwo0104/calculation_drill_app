@@ -90,7 +90,7 @@ class PostController extends Controller
 
     public function multiplication() {
         #ページタイトルの変数格納
-        $title = '足し算の計算問題出力';
+        $title = '掛け算の計算問題出力';
         # 配列の初期化
         $data = [];
 
@@ -119,7 +119,7 @@ class PostController extends Controller
             }
         }
 
-        return view('post.multiplication', compact('data'));
+        return view('post.multiplication', compact('data', 'title'));
     }
 
     public function multiplication_answer() {
