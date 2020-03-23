@@ -74,12 +74,12 @@ class PostController extends Controller
         $pdf = PDF::loadView('post.pdf_output_addition', compact('data', 'title'));
         return $pdf->stream();
     }
-
+    
     public function subtraction() {
         
         #ページタイトルの変数格納
         $title = '引き算の計算問題出力';
-
+        
         # 配列の初期化
         $data = [];
         
@@ -102,13 +102,13 @@ class PostController extends Controller
                     'num_2' => $num_2,
                     'num_result' => $num_result,
                     ]);
-            }else{
-                $data = [
-                    [
-                        'num_1' => $num_1,
-                        'num_2' => $num_2,
-                        'num_result' => $num_result,
-                    ]
+                }else{
+                    $data = [
+                        [
+                            'num_1' => $num_1,
+                            'num_2' => $num_2,
+                            'num_result' => $num_result,
+                            ]
                 ];
             }
         }
@@ -130,6 +130,18 @@ class PostController extends Controller
         return view('post.subtraction_answer', compact('data', 'title'));
     }
     
+    public function pdf_output_subtraction() {
+
+        #sessionに格納された値を取得
+        $data = session()->get('subtraction_data');
+
+        #ページタイトルの変数格納
+        $title = '引き算の計算問題PDF出力';
+    
+        $pdf = PDF::loadView('post.pdf_output_subtraction', compact('data', 'title'));
+        return $pdf->stream();
+
+    }
     public function multiplication() {
         #ページタイトルの変数格納
         $title = '掛け算の計算問題出力';
