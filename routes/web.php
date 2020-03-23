@@ -24,3 +24,4 @@ Route::get('/post/subtraction', 'PostController@subtraction');
 Route::get('/post/subtraction/answer', 'PostController@subtraction_answer');
 Route::get('/post/multiplication', 'PostController@multiplication');
 Route::get('/post/multiplication/answer', 'PostController@multiplication_answer');
+Route::get('/pdf', 'PdfController@test');
