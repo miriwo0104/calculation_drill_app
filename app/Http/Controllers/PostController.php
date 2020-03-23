@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use PDF;
+
 class PostController extends Controller
 {
     public function addition() {
@@ -61,8 +63,20 @@ class PostController extends Controller
         return view('post.addition_answer', compact('data', 'title'));
     }
     
-    public function subtraction() {
+    public function pdf_output_addition() {
 
+        #sessionに格納された値を取得
+        $data = session()->get('addition_data');
+
+        #ページタイトルの変数格納
+        $title = '足し算の計算問題PDF出力';
+    
+        $pdf = PDF::loadView('post.pdf_output_addition', compact('data', 'title'));
+        return $pdf->stream();
+    }
+
+    public function subtraction() {
+        
         #ページタイトルの変数格納
         $title = '引き算の計算問題出力';
 
