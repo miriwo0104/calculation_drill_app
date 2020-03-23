@@ -22,6 +22,13 @@ class PostController extends Controller
             $num_result = $num_1 + $num_2;
             
             if (isset($data[0])){
+#               $data[] = [
+#                    [
+#                        'num_1' => $num_1,
+#                        'num_2' => $num_2,
+#                        'num_result' => $num_result,
+#                    ]
+#                ];
                 array_push($data, [
                     'num_1' => $num_1,
                     'num_2' => $num_2,
