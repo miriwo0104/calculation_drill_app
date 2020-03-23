@@ -25,5 +25,3 @@ Route::get('/post/subtraction/answer', 'PostController@subtraction_answer');
 Route::get('/post/multiplication', 'PostController@multiplication');
 Route::get('/post/multiplication/answer', 'PostController@multiplication_answer');
 Route::get('/pdf_output/addition', 'PostController@pdf_output_addition');
-Route::get('/pdf', 'PdfController@test');
-Route::get('/pdf_2', 'PdfController@test_2');
