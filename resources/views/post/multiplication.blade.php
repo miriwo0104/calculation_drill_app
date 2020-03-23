@@ -11,6 +11,9 @@
     <a href="/post/multiplication/answer">
         <button type="button">答えを表示する</button>
     </a>
+    <a href="/pdf_output/multiplication">
+        <button type="button">問題をPDF出力する</button>
+    </a>
     
     @foreach ($data as $datum)
     <p>

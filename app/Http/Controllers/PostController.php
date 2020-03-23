@@ -142,6 +142,7 @@ class PostController extends Controller
         return $pdf->stream();
 
     }
+    
     public function multiplication() {
         #ページタイトルの変数格納
         $title = '掛け算の計算問題出力';
@@ -169,8 +170,8 @@ class PostController extends Controller
                             'num_2' => $num_2,
                             'num_result' => $num_result,
                             ]
-                ];
-            }
+                        ];
+                    }
         }
         #計算データが格納された配列$dataをsessionに格納
         session()->put('multiplication_data', $data);
@@ -179,7 +180,7 @@ class PostController extends Controller
     }
     
     public function multiplication_answer() {
-
+        
         #sessionに格納された値を取得
         $data = session()->get('multiplication_data');
         
@@ -187,5 +188,18 @@ class PostController extends Controller
         $title = '割り算の計算問題解答出力';
         
         return view('post.multiplication_answer', compact('data', 'title'));
+    }
+
+    public function pdf_output_multiplication() {
+    
+        #sessionに格納された値を取得
+        $data = session()->get('multiplication_data');
+    
+        #ページタイトルの変数格納
+        $title = '掛け算の計算問題PDF出力';
+    
+        $pdf = PDF::loadView('post.pdf_output_multiplication', compact('data', 'title'));
+        return $pdf->stream();
+    
     }
 }
