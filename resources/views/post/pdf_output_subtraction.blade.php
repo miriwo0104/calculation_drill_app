@@ -1,7 +1,7 @@
-@extends('layout.application')
+@extends('layout.pdf')
 
 @section('title')
-    {{$title}}
+    引き算
 @endsection
 
 @section('content')
@@ -14,6 +14,9 @@
             -__<br>
         </p>
     @endforeach
+    <p>
+        答え
+    </p>
     @foreach ($data as $datum)
         <p>
             {{$datum['num_1']}}<br>
