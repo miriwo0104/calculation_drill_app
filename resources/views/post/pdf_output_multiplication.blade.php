@@ -14,10 +14,10 @@
             ×__<br>
         </p>
     @endforeach
+    <p>
+        答え
+    </p>
     @foreach ($data as $datum)
-        <p>
-            答え
-        </p>
         <p>
             {{$datum['num_1']}}<br>
             {{$datum['num_2']}}<br>
