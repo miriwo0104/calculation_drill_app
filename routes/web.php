@@ -27,3 +27,4 @@ Route::get('/post/multiplication/answer', 'PostController@multiplication_answer'
 Route::get('/pdf_output/addition', 'PostController@pdf_output_addition');
 Route::get('/pdf_output/subtraction', 'PostController@pdf_output_subtraction');
 Route::get('/pdf_output/multiplication', 'PostController@pdf_output_multiplication');
+Route::get('/pdf_output/test', 'PostController@test');

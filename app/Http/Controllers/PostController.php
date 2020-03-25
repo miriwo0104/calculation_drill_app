@@ -200,6 +200,10 @@ class PostController extends Controller
     
         $pdf = PDF::loadView('post.pdf_output_multiplication', compact('data', 'title'));
         return $pdf->stream();
-    
+        
+    }
+    public function test() {
+        $pdf = PDF::loadView('post.test');
+        return $pdf->stream();
     }
 }
