@@ -13,6 +13,11 @@ class UserController extends Controller
         $user_id = Auth::id();
         $user = \App\User::find($user_id);
         $user_name = $user->name;
-        return view('user.home', compact('user_id', 'user_name'));
+        $addition_boolean = $user->addition;
+        $subtraction_boolean = $user->subtraction;
+        $multiplication_boolean = $user->multiplication;
+
+        $calculation_boolean_array = [$addition_boolean, $subtraction_boolean, $multiplication_boolean];
+        return view('user.home', compact('user_id', 'user_name', 'addition_boolean', 'subtraction_boolean', 'multiplication_boolean'));
     }
 }
