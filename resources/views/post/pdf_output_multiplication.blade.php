@@ -1,4 +1,4 @@
-@extends('layout.pdf')
+@extends('layouts.pdf')
 
 @section('title')
     掛け算

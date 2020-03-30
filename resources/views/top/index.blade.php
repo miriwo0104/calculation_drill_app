@@ -1,4 +1,4 @@
-@extends('layout.application')
+@extends('layouts.application')
 
 @section('title')
     計算問題出力
