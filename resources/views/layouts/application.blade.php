@@ -29,7 +29,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/output/multiplication">掛け算</a>
                         </li>
-                    @endif
+                        @endif
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/home">ホーム</a>
+                    </li>
                 </ul>
             </div>
         </nav>
