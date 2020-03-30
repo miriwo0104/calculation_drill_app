@@ -16,13 +16,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/post/addition">足し算</a>
+                        <a class="nav-link" href="/output/addition">足し算</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/post/subtraction">引き算</a>
+                        <a class="nav-link" href="/output/subtraction">引き算</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/post/multiplication">掛け算</a>
+                        <a class="nav-link" href="/output/multiplication">掛け算</a>
                     </li>
                 </ul>
             </div>

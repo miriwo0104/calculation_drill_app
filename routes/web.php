@@ -18,16 +18,16 @@ use Illuminate\Support\Facades\Route;
 #});
 
 Route::get('/', 'TopController@index');
-Route::get('/post/addition', 'PostController@addition');
-Route::get('/post/addition/answer', 'PostController@addition_answer');
-Route::get('/post/subtraction', 'PostController@subtraction');
-Route::get('/post/subtraction/answer', 'PostController@subtraction_answer');
-Route::get('/post/multiplication', 'PostController@multiplication');
-Route::get('/post/multiplication/answer', 'PostController@multiplication_answer');
-Route::get('/pdf_output/addition', 'PostController@pdf_output_addition');
-Route::get('/pdf_output/subtraction', 'PostController@pdf_output_subtraction');
-Route::get('/pdf_output/multiplication', 'PostController@pdf_output_multiplication');
-Route::get('/pdf_output/test', 'PostController@test');
+Route::get('/output/addition', 'OutputController@addition');
+Route::get('/output/addition/answer', 'OutputController@addition_answer');
+Route::get('/output/subtraction', 'OutputController@subtraction');
+Route::get('/output/subtraction/answer', 'OutputController@subtraction_answer');
+Route::get('/output/multiplication', 'OutputController@multiplication');
+Route::get('/output/multiplication/answer', 'OutputController@multiplication_answer');
+Route::get('/pdf_output/addition', 'OutputController@pdf_output_addition');
+Route::get('/pdf_output/subtraction', 'OutputController@pdf_output_subtraction');
+Route::get('/pdf_output/multiplication', 'OutputController@pdf_output_multiplication');
+Route::get('/pdf_output/test', 'OutputController@test');
 Route::get('/user/home', 'UserController@home');
 Auth::routes();
 
