@@ -32,7 +32,7 @@
         </a>
     <br>
     @endif
-        <a href="/user?settings">
+        <a href="/user/settings">
             <button type="button" class="btn btn-light btn-lg">設定</button>
         </a>
     <br>

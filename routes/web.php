@@ -29,6 +29,7 @@ Route::get('/pdf_output/subtraction', 'OutputController@pdf_output_subtraction')
 Route::get('/pdf_output/multiplication', 'OutputController@pdf_output_multiplication');
 Route::get('/pdf_output/test', 'OutputController@test');
 Route::get('/user/home', 'UserController@home');
+Route::get('/user/settings', 'UserController@settings');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

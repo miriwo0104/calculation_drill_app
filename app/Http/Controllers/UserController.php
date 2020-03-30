@@ -20,4 +20,8 @@ class UserController extends Controller
         $calculation_boolean_array = [$addition_boolean, $subtraction_boolean, $multiplication_boolean];
         return view('user.home', compact('user_id', 'user_name', 'addition_boolean', 'subtraction_boolean', 'multiplication_boolean'));
     }
+
+    public function settings() {
+        return view('user.settings');
+    }
 }
