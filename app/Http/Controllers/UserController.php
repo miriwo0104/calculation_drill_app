@@ -13,6 +13,6 @@ class UserController extends Controller
         $user_id = Auth::id();
         $user = \App\User::find($user_id);
         $user_name = $user->name;
-        return view('user.home', compact('user_id'));
+        return view('user.home', compact('user_id', 'user_name'));
     }
 }
