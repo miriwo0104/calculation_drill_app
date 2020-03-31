@@ -28,10 +28,13 @@ class UserController extends Controller
     public function change_settings(Request $request) {
         $user_id = Auth::id();
         $user = \App\User::find($user_id);
-        $user->addition = 1;
-//        $user->addition = '$request->addition_boolean';
-//        $user->subtraction = '$request->subtraction_boolean';
-//        $user->multiplication = '$request->multiplication_boolean';
+        $addition_boolean = $request->addition_boolean;
+        $subtraction_boolean = $request->subtraction_boolean;
+        $multiplication_boolean = $request->multiplication_boolean;
+
+        $user->addition = $addition_boolean;
+        $user->subtraction = $subtraction_boolean;
+        $user->multiplication = $multiplication_boolean;
         $user->save();
         return redirect('/user/home');
     }
