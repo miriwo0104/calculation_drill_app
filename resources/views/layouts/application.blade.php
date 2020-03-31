@@ -15,17 +15,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    @if ($addition_boolean = 1)
+                    @if ($addition_boolean == 1)
                         <li class="nav-item">
                             <a class="nav-link" href="/output/addition">足し算</a>
                         </li>
                     @endif
-                    @if ($subtraction_boolean = 1)
+                    @if ($subtraction_boolean == 1)
                         <li class="nav-item">
                             <a class="nav-link" href="/output/subtraction">引き算</a>
                         </li>
                     @endif
-                    @if ($multiplication_boolean = 1)
+                    @if ($multiplication_boolean == 1)
                         <li class="nav-item">
                             <a class="nav-link" href="/output/multiplication">掛け算</a>
                         </li>

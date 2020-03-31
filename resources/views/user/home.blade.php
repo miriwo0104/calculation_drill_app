@@ -14,19 +14,19 @@
     @endphp
 
     <br>
-    @if ($addition_boolean = 1)
+    @if ($addition_boolean == 1)
         <a href="/output/addition">
             <button type="button" class="btn btn-success btn-lg">足し算の問題を表示</button>
         </a>
     <br>
     @endif
-    @if ($subtraction_boolean = 1)
+    @if ($subtraction_boolean == 1)
         <a href="/output/subtraction">
             <button type="button" class="btn btn-success btn-lg">引き算の問題を表示</button>
         </a>
     <br>
     @endif
-    @if ($multiplication_boolean = 1)
+    @if ($multiplication_boolean == 1)
         <a href="/output/multiplication">
             <button type="button" class="btn btn-success btn-lg">掛け算の問題を表示</button>
         </a>
