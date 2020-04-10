@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function home() {
         $user_id = Auth::id();
-        $user = \App\User::find($user_id);
+        $user = \App\UserSetting::find($user_id);
         $user_name = $user->name;
         $addition_boolean = $user->addition;
         $subtraction_boolean = $user->subtraction;
@@ -27,7 +27,7 @@ class UserController extends Controller
     
     public function change_settings(Request $request) {
         $user_id = Auth::id();
-        $user = \App\User::find($user_id);
+        $user = \App\UserSetting::find($user_id);
         $addition_boolean = $request->addition_boolean;
         $subtraction_boolean = $request->subtraction_boolean;
         $multiplication_boolean = $request->multiplication_boolean;
